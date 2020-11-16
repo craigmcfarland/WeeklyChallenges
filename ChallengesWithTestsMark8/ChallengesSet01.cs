@@ -18,7 +18,7 @@ namespace ChallengesWithTestsMark8
 
         public double Subtract(double minuend, double subtrahend)
         {
-            return subtrahend - minuend;
+            return minuend - subtrahend;
         }
 
         public int Add(int number1, int number2)
@@ -36,6 +36,7 @@ namespace ChallengesWithTestsMark8
             {
                 return number2;
             }
+           
         }
 
         public long Multiply(long factor1, long factor2)
@@ -45,13 +46,20 @@ namespace ChallengesWithTestsMark8
 
         public string GetGreeting(string nameOfPerson)
         {
-            return nameOfPerson;
 
+            if (nameOfPerson == "")
+            {
+                return "Hello!";
+            }
+            else
+            {
+                return $"Hello, {nameOfPerson}!";
+            }
         }
 
         public string GetHey()
         {
-            return ("");
+            return "HEY!";
 
         }
     }
