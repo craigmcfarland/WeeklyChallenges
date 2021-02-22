@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gYoHE5XGL3wui5OELd772rzz7P3AjgrVlJeRxDUQ97c5n9so9NpibQCI3jXtKzTW3C1YxHCww8gStPM57u1qsg==",
+  "dgSpecHash": "uddMLeegf3mh49nYGRlrw9wLHqSspl2kdNuWmJtIuN+sfXoheQWZ2gn8mx9LKC6qfgrxoeaVtwRa0e8dO9SgFA==",
   "success": true,
-  "projectFilePath": "/Users/craigmcfarland/repos/WeeklyChallenges/ChallengesWithTestsMark8/ChallengesWithTestsMark8.csproj",
+  "projectFilePath": "/Users/craigmcfarland/repos2/WeeklyChallenges/ChallengesWithTestsMark8/ChallengesWithTestsMark8.csproj",
   "expectedPackageFiles": [
     "/Users/craigmcfarland/.nuget/packages/microsoft.netcore.app/2.1.0/microsoft.netcore.app.2.1.0.nupkg.sha512",
     "/Users/craigmcfarland/.nuget/packages/microsoft.netcore.dotnetapphost/2.1.0/microsoft.netcore.dotnetapphost.2.1.0.nupkg.sha512",

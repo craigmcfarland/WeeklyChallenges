@@ -8,14 +8,23 @@ namespace ChallengesWithTestsMark8
     {
         public bool CharacterIsALetter(char c)
         {
-            
-          
+
+            return char.IsLetter(c);
 
         }
 
         public bool CountOfElementsIsEven(string[] vals)
         {
-            throw new NotImplementedException();
+           if(vals.Length % 2 == 0)
+            {
+                return true;
+
+            }
+           else
+            {
+                return false;
+
+            }
         }
 
         public bool IsNumberEven(int number)
@@ -43,11 +52,22 @@ namespace ChallengesWithTestsMark8
             {
                 return true;
             }
+            
         }
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
         {
-            throw new NotImplementedException();
+           if(numbers == null)
+            {
+                return 0;
+
+            }
+           if (numbers.Count() == 0)
+            {
+                return 0;
+            }
+            return numbers.Min() + numbers.Max();
+
         }
 
         public int GetLengthOfShortestString(string str1, string str2)
@@ -65,37 +85,58 @@ namespace ChallengesWithTestsMark8
 
         public int Sum(int[] numbers)
         {
+            if (numbers == null)
+            {
+                return 0;
+
+            }
             return numbers.Sum();
         }
 
 
         public int SumEvens(int[] numbers)
         {
-            var evenSum = new List<int>();
-            foreach (var num in numbers)
+            
+                
+            if (numbers == null)
             {
-                if (num % 2 == 0)
-                {
-                    evenSum.Add(num);
-                    return evenSum.Sum();
-                }
+                return 0;
+
             }
+            return numbers.Where(x => x % 2 == 0).Sum();
+
+     
         }
 
-        private void Sum()
-        {
-            throw new NotImplementedException();
-        }
-    }
+        
+
 
         public bool IsSumOdd(List<int> numbers)
         {
-            
+            if (numbers == null)
+            {
+                return false;
+
+            }
+            return numbers.Sum() % 2 != 0;
+
+
         }
+
+
 
         public long CountOfPositiveOddsBelowNumber(long number)
         {
-            throw new NotImplementedException();
+            if (number <= 0)
+            {
+                return 0;
+
+            }
+            else
+            {
+                return number / 2;
+
+            }
         }
     }
 }

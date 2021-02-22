@@ -1,16 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ChallengesWithTestsMark8
 {
     public class ChallengesSet03
     {
+
+
         public bool ArrayContainsAFalse(bool[] vals)
         {
-            throw new NotImplementedException();
+            return vals.Contains(false);
         }
 
-        public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
+        public object IsSumOfOddsOdd(IEnumerable<int> numbers)
         {
             throw new NotImplementedException();
         }
@@ -18,26 +21,37 @@ namespace ChallengesWithTestsMark8
         public bool PasswordContainsUpperLowerAndNumber(string password)
         {
             throw new NotImplementedException();
+
         }
 
         public char GetFirstLetterOfString(string val)
         {
-            throw new NotImplementedException();
-        }
+            return val[0];
 
+        }
         public char GetLastLetterOfString(string val)
         {
-            throw new NotImplementedException();
+            var last = val;
+            return last[val.Length - 1];
         }
 
         public decimal Divide(decimal dividend, decimal divisor)
         {
-            throw new NotImplementedException();
+            if (divisor == 0)
+            {
+                return 0;
+
+            }
+            else
+            {
+                return dividend / divisor;
+            }
+            
         }
 
         public int LastMinusFirst(int[] nums)
         {
-            throw new NotImplementedException();
+            return nums[nums.Length - 1] - nums[0];
         }
 
         public int[] GetOddsBelow100()
@@ -46,6 +60,11 @@ namespace ChallengesWithTestsMark8
         }
 
         public void ChangeAllElementsToUppercase(string[] words)
+        {
+            throw new NotImplementedException();
+        }
+
+        private bool ToUpperCase(string[] words)
         {
             throw new NotImplementedException();
         }

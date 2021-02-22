@@ -7,6 +7,7 @@ namespace ChallengesWithTestsMark8
         public int AddEvenSubtractOdd(int[] numbers)
         {
             throw new NotImplementedException();
+
         }
 
         public int GetLengthOfShortestString(string str1, string str2, string str3, string str4)
@@ -16,7 +17,11 @@ namespace ChallengesWithTestsMark8
 
         public int GetSmallestNumber(int number1, int number2, int number3, int number4)
         {
-            throw new NotImplementedException();
+            
+            {
+
+                throw new NotImplementedException();
+            }
         }
 
         public void ChangeBusinessNameTo_TrueCoders(Business biz)
