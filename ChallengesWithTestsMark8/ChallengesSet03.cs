@@ -15,24 +15,55 @@ namespace ChallengesWithTestsMark8
 
         public object IsSumOfOddsOdd(IEnumerable<int> numbers)
         {
-            throw new NotImplementedException();
+            if (numbers == null)
+            {
+                return false;
+            }
+            var sum = numbers.Sum();
+            return (sum % 2 != 0);
         }
 
         public bool PasswordContainsUpperLowerAndNumber(string password)
         {
-            throw new NotImplementedException();
+            var isLower = false;
+            var isUpper = false;
+            var isNumber = false;
+            foreach (var i in password)
+            {
+                if (char.IsLower(i))
+                {
+                    isLower = true;
+                }
+                if (char.IsUpper(i))
+                {
+                    isUpper = true;
+                }
+                if (char.IsNumber(i))
+                {
+                    isNumber = true;
+                }
+            }
+            if (isLower == true && isUpper == true && isNumber == true)
+            {
+                return true;
+
+            }
+            else
+            {
+                return false;
+            }
 
         }
 
         public char GetFirstLetterOfString(string val)
         {
-            return val[0];
-
+            //return val[0];
+            return val.First();
         }
         public char GetLastLetterOfString(string val)
         {
-            var last = val;
-            return last[val.Length - 1];
+            //\var last = val;
+            return val[val.Length - 1];
         }
 
         public decimal Divide(decimal dividend, decimal divisor)
@@ -56,17 +87,26 @@ namespace ChallengesWithTestsMark8
 
         public int[] GetOddsBelow100()
         {
-            throw new NotImplementedException();
+            var list = new List<int>();
+            for (int i = 0; i < 100; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    list.Add(i);
+                }
+
+            }
+            return list.ToArray();
         }
 
         public void ChangeAllElementsToUppercase(string[] words)
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < words.Length; i++)
+            {
+                words[i] = words[i].ToUpper();
+            }
         }
 
-        private bool ToUpperCase(string[] words)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }
