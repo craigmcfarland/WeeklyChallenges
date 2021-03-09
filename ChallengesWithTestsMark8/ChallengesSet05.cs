@@ -7,27 +7,76 @@ namespace ChallengesWithTestsMark8
     {
         public int GetNextNumberDivisibleByN(int startNumber, int n)
         {
-            throw new NotImplementedException();
+            return ((startNumber / n) + 1) * n;
         }
 
         public void ChangeNamesOfBusinessesWithNoRevenueTo_CLOSED(Business[] businesses)
         {
-            throw new NotImplementedException();
+            foreach (var bus in businesses)
+            {
+                if (bus.TotalRevenue == 0)
+                {
+                    bus.Name = "CLOSED";
+                }
+            }
         }
 
         public bool IsAscendingOrder(int[] numbers)
         {
-            throw new NotImplementedException();
+            if (numbers == null || numbers.Length == 0)
+            {
+                return false;
+            }
+
+            for (int i = 1; i < numbers.Length; i ++)
+            {
+                if (numbers[i] < numbers [i - 1])
+                {
+                    return false;
+                }
+                
+            }
+            return true;
         }
 
         public int SumElementsThatFollowAnEven(int[] numbers)
         {
-            throw new NotImplementedException();
+            if (numbers == null)
+            {
+                return 0;
+            }
+            var sum = 0;
+            for (var i = 1; i < numbers.Length; i++)
+            {
+                if (numbers[i - 1] % 2 == 0)
+                {
+                    sum += numbers[i];
+                }
+            }
+            return sum;
         }
 
         public string TurnWordsIntoSentence(string[] words)
         {
-            throw new NotImplementedException();
+            if (words == null)
+            {
+                return "";
+            }
+            string sentence = "";
+            foreach (string word in words)
+            {
+                if (word.Trim().Length > 0)
+                {
+                    sentence += word.Trim() + " ";
+                }       
+            }
+            if (sentence.Length == 0)
+            {
+                return "";
+            }
+            sentence = sentence.Substring(0, sentence.Length - 1);
+            sentence += ".";
+            return sentence;
         }
 
         public double[] GetEveryFourthElement(List<double> elements)

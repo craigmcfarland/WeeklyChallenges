@@ -54,22 +54,71 @@ namespace ChallengesWithTestsMark8
 
         public bool IsStringANumber(string input)
         {
-            throw new NotImplementedException();
+            var isnumber = double.TryParse(input, out double number);
+            return isnumber; 
         }
 
         public bool MajorityOfElementsInArrayAreNull(object[] objs)
         {
-            throw new NotImplementedException();
+            var amount = objs.Length;
+            var majority = (amount / 2) + 1;
+            var count = 0;
+            foreach (var ob in objs)
+            {
+                if (ob == null)
+                {
+                    count++;
+                }
+            }
+            if (count >= majority)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public double AverageEvens(int[] numbers)
         {
-            throw new NotImplementedException();
+            double sum = 0;
+            double count = 0;
+            if (numbers == null)
+            {
+                return 0;
+            }
+            foreach (var num in numbers)
+            {
+                if (num % 2 == 0)
+                {
+                    sum += num;
+                    count++;
+                }
+            }
+            if (count >0)
+            {
+                return sum / count;
+            }
+            else
+            {
+                return 0;
+            }
         }
 
         public int Factorial(int number)
         {
-            throw new NotImplementedException();
+            var fact = 1;
+            if (number < 0)
+            {
+                return 0;
+            }
+            for (int i = number; i > 0 ; i--)
+            {
+                fact *= i;
+            }
+            return fact;
+             
         }
     }
 }
